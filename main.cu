@@ -13,7 +13,6 @@ __global__ void vectorAdd(const float *A, const float *B, float *C, int numEleme
 	}
 }
 
-
 int main(void) {
 	cudaError_t err = cudaSuccess;
 	int numElements = 50000;
