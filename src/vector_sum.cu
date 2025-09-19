@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <cuda_runtime.h>
-#include "helper_cuda.h"
 
 #define N (2048*2048)
 #define THREADS_PER_BLOCK 512
@@ -24,7 +23,7 @@ int main(void) {
 	float *h_C = (float *) malloc(size);
 
 	if ((h_A == NULL) || (h_B == NULL) || (h_C == NULL)) {
-		fprintf(stderr, "Failde to allocate host vectors!\n");
+		fprintf(stderr, "Failed to allocate host vectors!\n");
 		exit(EXIT_FAILURE);
 	}
 
